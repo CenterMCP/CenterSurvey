@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Share your thoughts · CenterSurvey</title>
+  <link rel="stylesheet" href="../survey.css">
+  <script src="../survey.js" defer></script>
+</head>
+<body>
+  <div class="survey-app">
+    <header><span class="brand-mark" aria-hidden="true">C</span><span class="brand">CenterSurvey<small>YOUR VOICE MATTERS</small></span><span class="header-tag">LET’S HEAR YOU <span aria-hidden="true">✦</span></span></header>
+    <main>
+      <div id="loading" class="notice" role="status">Getting your survey ready…</div>
+      <div id="load-error" class="notice error" role="alert" hidden></div>
+      <button id="reload" class="secondary" type="button" hidden>Reload survey</button>
+      <section id="survey-view" hidden aria-labelledby="survey-title">
+        <div class="hero"><span class="hero-icon" aria-hidden="true">✧</span><p class="eyebrow">A MOMENT TO MAKE A DIFFERENCE</p><h1 id="survey-title"></h1><p id="survey-description"></p></div>
+        <div class="progress-row"><span id="page-label"></span><span id="question-count"></span></div>
+        <progress id="progress" max="1" value="1" aria-label="Survey progress"></progress>
+        <form id="survey-form" novalidate>
+          <div id="pages"></div>
+          <p id="answer-error" class="notice error" role="alert" hidden></p>
+          <div class="form-actions"><button id="back" class="secondary" type="button" hidden>← Back</button><button id="continue" class="primary" type="button">Continue →</button><button id="submit" class="primary" type="submit" hidden>Send my answers ↗</button></div>
+          <p class="privacy-note">Your answers will be shared with the survey owner. Please avoid sharing sensitive information unless it is needed.</p>
+        </form>
+      </section>
+      <section id="thanks" class="thanks" aria-labelledby="thanks-title" hidden><span class="hero-icon" aria-hidden="true">✓</span><p class="eyebrow">YOU MADE A DIFFERENCE</p><h1 id="thanks-title" tabindex="-1">Thanks for sharing.</h1><p>Your response has been received.<br>We appreciate you taking the time.</p><div class="receipt"><span>YOUR RESPONSE RECEIPT</span><code id="receipt-id"></code></div><p class="privacy-note">You can safely close this page.</p></section>
+      <noscript><p class="notice error">Please enable JavaScript to complete this survey.</p></noscript>
+    </main>
+    <footer><span aria-hidden="true">✦</span><p>A little feedback. A meaningful difference.</p><small>POWERED BY CENTERSURVEY</small></footer>
+  </div>
+</body>
+</html>
